@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyToDoList</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div id="myDIV" class="myHeader">
-        <h2 style="margin:5px">My To Do List</h2>
-        <input type="text" id="myInput" placeholder="Title...">
-        <span onclick="newElement()" class="addBtn">Add</span>
-    </div>
-    <ul id="myUL">
-        <li>Hit the gym</li>
-        <li class="checked">Pay bills</li>
-    </ul>
-
-    <script src="script.js"></script>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ToDoList</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- povezivanje sa Bootstrap predefinisanim klasama (Include Bootstrap)-->
+        <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+        <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div id="myHeader" class="text-center py-3">
+            <p class="text-light mb-2">My To Do List</p>
+            <div id="inputRow" class="d-inline-block">
+                <input id="input1" placeholder="Title..." class="float1 p-1 border border-none">
+                <button id="button1" class="float1 p-1 border border-0" onclick="addItem()">Add</button>
+            </div>
+        </div>
+        <table class="table table-hover w-100">
+            <tbody id="addedItems">
+            </tbody>
+        </table>
+        <script src="script.js"></script>
+    </body>
 </html>
